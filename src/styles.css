@@ -1,0 +1,360 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Inter", "SF Pro Display", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-cosmic: var(--cosmic);
+  --color-aurora: var(--aurora);
+  --color-stardust: var(--stardust);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-spin-slow: spin 40s linear infinite;
+  --animate-spin-reverse: spin-reverse 60s linear infinite;
+  --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
+  --animate-drift: drift 20s ease-in-out infinite;
+  --animate-warp-in: warp-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-veil: veil 1.6s ease-in-out both;
+  --animate-hud: hud 1.6s ease-out both;
+
+  @keyframes tunnel {
+    0% { width: 40px; height: 40px; opacity: 0; border-width: 2px; }
+    20% { opacity: 1; }
+    100% { width: 220vmax; height: 220vmax; opacity: 0; border-width: 1px; }
+  }
+  @keyframes suck {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    100% { transform: translate(0, 0) scale(0.2); opacity: 0; }
+  }
+  @keyframes portal-bloom {
+    0% { transform: scale(0); opacity: 0; }
+    30% { opacity: 1; }
+    55% { transform: scale(1.1); opacity: 1; }
+    80% { transform: scale(8); opacity: 0.4; }
+    100% { transform: scale(14); opacity: 0; }
+  }
+  @keyframes veil {
+    0% { opacity: 0; }
+    25% { opacity: 0.92; }
+    70% { opacity: 0.92; }
+    100% { opacity: 0; }
+  }
+  @keyframes hud {
+    0% { opacity: 0; transform: translate(-50%, 8px); filter: blur(6px); }
+    25% { opacity: 1; filter: blur(0); }
+    75% { opacity: 1; }
+    100% { opacity: 0; filter: blur(6px); }
+  }
+  @keyframes accretion-spin {
+    from { transform: rotateX(72deg) rotate(0deg); }
+    to { transform: rotateX(72deg) rotate(360deg); }
+  }
+  @keyframes accretion-spin-rev {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+  }
+  @keyframes lens-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  @keyframes core-pulse {
+    0%, 100% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.04); filter: brightness(0.92); }
+  }
+  @keyframes field-pulse {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+  @keyframes portal-fade {
+    0% { opacity: 0; }
+    18% { opacity: 1; }
+    82% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  @keyframes dust-orbit {
+    from { rotate: 0deg; }
+    to { rotate: 360deg; }
+  }
+  @keyframes streak {
+    0% { opacity: 0; transform: rotate(var(--a, 0deg)) scaleX(0.2); }
+    30% { opacity: 1; }
+    100% { opacity: 0; transform: rotate(var(--a, 0deg)) scaleX(1); }
+  }
+  @keyframes lens-warp {
+    0% { transform: scale(1); filter: blur(0); }
+    50% { transform: scale(1.18) rotate(3deg); filter: blur(1.5px); }
+    100% { transform: scale(1.06) rotate(0deg); filter: blur(0); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes spin-reverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.6; filter: blur(40px); }
+    50% { opacity: 1; filter: blur(60px); }
+  }
+  @keyframes drift {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -20px); }
+  }
+  @keyframes warp-in {
+    0% {
+      opacity: 0;
+      transform: scale(1.04) translateY(8px);
+      filter: blur(14px) saturate(1.4);
+    }
+    60% {
+      opacity: 1;
+      filter: blur(0) saturate(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      filter: blur(0) saturate(1);
+    }
+  }
+}
+
+:root {
+  --radius: 0.875rem;
+
+  /* Cosmic dark theme — deep navy, purple, black */
+  --background: oklch(0.08 0.03 270);
+  --foreground: oklch(0.96 0.01 270);
+
+  --card: oklch(0.12 0.04 275);
+  --card-foreground: oklch(0.96 0.01 270);
+
+  --popover: oklch(0.12 0.04 275);
+  --popover-foreground: oklch(0.96 0.01 270);
+
+  --primary: oklch(0.72 0.18 290);
+  --primary-foreground: oklch(0.08 0.03 270);
+
+  --secondary: oklch(0.18 0.05 280);
+  --secondary-foreground: oklch(0.96 0.01 270);
+
+  --muted: oklch(0.16 0.04 275);
+  --muted-foreground: oklch(0.68 0.04 275);
+
+  --accent: oklch(0.65 0.20 265);
+  --accent-foreground: oklch(0.96 0.01 270);
+
+  --destructive: oklch(0.65 0.24 25);
+  --destructive-foreground: oklch(0.96 0.01 270);
+
+  --border: oklch(0.96 0.01 270 / 0.08);
+  --input: oklch(0.96 0.01 270 / 0.1);
+  --ring: oklch(0.72 0.18 290);
+
+  /* Brand cosmic tokens */
+  --cosmic: oklch(0.45 0.22 280);
+  --aurora: oklch(0.70 0.22 295);
+  --stardust: oklch(0.85 0.10 260);
+
+  --gradient-portal: radial-gradient(
+    circle at center,
+    oklch(0.72 0.18 290) 0%,
+    oklch(0.40 0.20 280) 35%,
+    oklch(0.15 0.08 270) 65%,
+    oklch(0.05 0.02 270) 100%
+  );
+  --gradient-cosmic: linear-gradient(
+    135deg,
+    oklch(0.08 0.03 270) 0%,
+    oklch(0.15 0.08 280) 50%,
+    oklch(0.08 0.03 270) 100%
+  );
+  --gradient-aurora: linear-gradient(
+    120deg,
+    oklch(0.45 0.22 280) 0%,
+    oklch(0.65 0.22 295) 50%,
+    oklch(0.55 0.18 260) 100%
+  );
+  --gradient-glass: linear-gradient(
+    135deg,
+    oklch(1 0 0 / 0.06) 0%,
+    oklch(1 0 0 / 0.01) 100%
+  );
+
+  --shadow-glow: 0 0 60px -10px oklch(0.65 0.25 285 / 0.5);
+  --shadow-glow-sm: 0 0 30px -5px oklch(0.65 0.25 285 / 0.4);
+  --shadow-cosmic: 0 20px 80px -20px oklch(0.45 0.25 280 / 0.6);
+}
+
+.dark { color-scheme: dark; }
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  * { border-color: var(--color-border); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: oklch(0.65 0.22 285 / 0.4);
+    color: oklch(0.98 0.01 270);
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid oklch(1 0 0 / 0.08);
+  }
+  .glass-strong {
+    background: oklch(0.14 0.05 280 / 0.6);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border: 1px solid oklch(1 0 0 / 0.1);
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, oklch(0.98 0.01 270), oklch(0.72 0.18 290));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-aurora {
+    background: var(--gradient-aurora);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-glow-sm { box-shadow: var(--shadow-glow-sm); }
+  .shadow-cosmic { box-shadow: var(--shadow-cosmic); }
+  .bg-cosmic { background: var(--gradient-cosmic); }
+  .bg-aurora { background: var(--gradient-aurora); }
+  .bg-portal { background: var(--gradient-portal); }
+
+  .starfield {
+    background-image:
+      radial-gradient(1px 1px at 25% 15%, oklch(1 0 0 / 0.8), transparent),
+      radial-gradient(1px 1px at 50% 50%, oklch(1 0 0 / 0.6), transparent),
+      radial-gradient(1px 1px at 75% 35%, oklch(1 0 0 / 0.7), transparent),
+      radial-gradient(1px 1px at 10% 80%, oklch(1 0 0 / 0.5), transparent),
+      radial-gradient(1px 1px at 90% 70%, oklch(1 0 0 / 0.8), transparent),
+      radial-gradient(1px 1px at 35% 90%, oklch(1 0 0 / 0.6), transparent),
+      radial-gradient(2px 2px at 60% 20%, oklch(1 0 0 / 0.9), transparent),
+      radial-gradient(1px 1px at 85% 5%, oklch(1 0 0 / 0.7), transparent);
+    background-size: 400px 400px;
+  }
+}
+
+/* === Wormhole portal animations === */
+@keyframes wh-disk-spin {
+  to { transform: translate(-50%, -50%) rotateX(74deg) rotateZ(360deg); }
+}
+@keyframes wh-disk-spin-rev {
+  to { transform: translate(-50%, -50%) rotateX(74deg) rotateZ(-360deg); }
+}
+@keyframes wh-lens-spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes wh-lens-spin-rev {
+  to { transform: translate(-50%, -50%) rotate(-360deg); }
+}
+@keyframes wh-orbit {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(var(--r)) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg) translateX(var(--r)) rotate(-360deg); }
+}
+@keyframes wh-infall {
+  0%   { transform: translate(-50%, -50%) rotate(var(--a)) translateX(var(--r0)) scale(1); opacity: 0; }
+  10%  { opacity: 1; }
+  100% { transform: translate(-50%, -50%) rotate(calc(var(--a) + 140deg)) translateX(0) scale(0.1); opacity: 0; }
+}
+@keyframes wh-ripple {
+  0%   { transform: translate(-50%, -50%) scale(0.45); opacity: 0.55; }
+  100% { transform: translate(-50%, -50%) scale(2.2); opacity: 0; }
+}
+@keyframes wh-core-breathe {
+  0%, 100% { box-shadow: inset 0 0 80px 20px oklch(0 0 0), inset 0 0 200px 40px oklch(0.04 0.05 285 / 0.9), 0 0 0 1px oklch(0.72 0.2 290 / 0.4); }
+  50%      { box-shadow: inset 0 0 110px 30px oklch(0 0 0), inset 0 0 240px 60px oklch(0.06 0.08 290 / 0.95), 0 0 0 1px oklch(0.78 0.22 295 / 0.55); }
+}
+@keyframes wh-photon {
+  0%, 100% { opacity: 0.85; filter: blur(0.5px); }
+  50%      { opacity: 1;    filter: blur(1.5px); }
+}
+@keyframes wh-glyph-pull {
+  0%   { opacity: 0; transform: translate(-50%, -50%) rotate(var(--a)) translateX(var(--r0)) rotate(calc(-1 * var(--a))) scale(1); }
+  10%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(calc(var(--a) + 90deg)) translateX(20px) rotate(calc(-1 * var(--a) - 90deg)) scale(0.25); }
+}
+@keyframes wh-shimmer {
+  0%, 100% { opacity: 0.6; }
+  50%      { opacity: 1; }
+}
+
+/* === Wormhole transition tunnel === */
+@keyframes wt-tunnel {
+  0%   { transform: translate(-50%, -50%) translateZ(-1400px) rotate(var(--rot, 0deg)) scale(0.2); opacity: 0; }
+  18%  { opacity: 1; }
+  100% { transform: translate(-50%, -50%) translateZ(900px) rotate(calc(var(--rot, 0deg) + 80deg)) scale(2.4); opacity: 0; }
+}
+@keyframes wt-streak {
+  0%   { transform: translate(-50%, -50%) rotate(var(--a)) translateX(8vmax) scaleX(0.2); opacity: 0; }
+  20%  { opacity: 1; }
+  100% { transform: translate(-50%, -50%) rotate(var(--a)) translateX(70vmax) scaleX(1); opacity: 0; }
+}
+@keyframes wt-glyph {
+  0%   { transform: translate(-50%, -50%) translate3d(var(--x0), var(--y0), -800px) rotate(var(--gr, 0deg)) scale(0.4); opacity: 0; filter: blur(8px); }
+  25%  { opacity: 1; filter: blur(0); }
+  100% { transform: translate(-50%, -50%) translate3d(0, 0, 400px) rotate(calc(var(--gr, 0deg) + 40deg)) scale(1.6); opacity: 0; filter: blur(2px); }
+}
+@keyframes wt-iris {
+  0%   { clip-path: circle(0% at 50% 50%); }
+  35%  { clip-path: circle(140% at 50% 50%); }
+  65%  { clip-path: circle(140% at 50% 50%); }
+  100% { clip-path: circle(0% at 50% 50%); }
+}
+@keyframes wt-shake {
+  0%, 100% { transform: translate(0,0); }
+  25% { transform: translate(-1px, 1px); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(-1px, -1px); }
+}
+@keyframes wt-coord {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
+}
