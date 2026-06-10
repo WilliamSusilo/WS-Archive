@@ -39,11 +39,16 @@ function Home() {
             Available for cloud & software engineering work · 2026
           </div>
 
-          <h1 className="relative z-10 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-            <span className="text-foreground">Cloud.</span>{" "}
-            <span className="text-aurora">Infrastructure.</span>
+          <h1 className="relative z-10 font-display font-bold leading-[1.05] tracking-tight">
+            <span className="text-4xl text-foreground sm:text-6xl lg:text-7xl">William</span>{" "}
+            <span className="text-4xl text-violet-300 sm:text-6xl lg:text-7xl">Susilo</span>
             <br />
-            <span className="text-gradient">Exploring how modern technology powers the world.</span>
+            <span className="mt-2 block text-lg text-gradient sm:text-2xl lg:text-3xl">
+              Continuously learning, building,
+            </span>
+            <span className="mt-2 block text-lg text-gradient sm:text-2xl lg:text-3xl">
+              and deploying modern cloud solutions.
+            </span>
           </h1>
 
           <p className="relative z-10 mt-10 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
@@ -85,7 +90,7 @@ function Home() {
                 key={s.label}
                 className="glass inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs text-muted-foreground"
               >
-                <s.icon className="h-3.5 w-3.5 text-aurora" />
+                <s.icon className="h-3.5 w-3.5 text-violet-400" />
                 {s.label}
               </span>
             ))}
@@ -95,7 +100,7 @@ function Home() {
           <div className="relative z-10 mt-20 grid max-w-2xl grid-cols-4 gap-8 border-t border-white/5 pt-8">
             {HERO_STATS.map((s) => (
               <div key={s.l}>
-                <div className="font-display text-3xl font-semibold text-aurora">{s.v}</div>
+                <div className="font-display text-3xl font-semibold text-violet-300">{s.v}</div>
                 <div className="mt-1 text-xs text-muted-foreground">{s.l}</div>
               </div>
             ))}
@@ -124,15 +129,15 @@ function Home() {
           aria-hidden
           className="pointer-events-none absolute hidden xl:block"
           style={{
-            right: "-6%",
+            right: "2%",
             top: "4rem",
             width: "500px",
             height: "500px",
             opacity: 0.65,
-            maskImage:
-              "radial-gradient(ellipse 78% 72% at 62% 50%, oklch(0 0 0) 32%, oklch(0 0 0 / 0.88) 58%, oklch(0 0 0 / 0.4) 80%, transparent 100%)",
-            WebkitMaskImage:
-              "radial-gradient(ellipse 78% 72% at 62% 50%, oklch(0 0 0) 32%, oklch(0 0 0 / 0.88) 58%, oklch(0 0 0 / 0.4) 80%, transparent 100%)",
+            // maskImage:
+            //   "radial-gradient(ellipse 78% 72% at 62% 50%, oklch(0 0 0) 32%, oklch(0 0 0 / 0.88) 58%, oklch(0 0 0 / 0.4) 80%, transparent 100%)",
+            // WebkitMaskImage:
+            //   "radial-gradient(ellipse 78% 72% at 62% 50%, oklch(0 0 0) 32%, oklch(0 0 0 / 0.88) 58%, oklch(0 0 0 / 0.4) 80%, transparent 100%)",
           }}
         >
           <Portal className="h-full w-full" />
@@ -144,7 +149,7 @@ function Home() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-10 flex items-end justify-between gap-6">
             <div>
-              <div className="font-mono text-xs uppercase tracking-[0.3em] text-aurora">
+              <div className="font-mono text-xs uppercase tracking-[0.3em] text-violet-300">
                 ▸ Explore the archive
               </div>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -167,9 +172,9 @@ function Home() {
                 <div className="absolute -inset-1 -z-10 rounded-2xl bg-gradient-to-br from-accent/20 via-cosmic/10 to-transparent opacity-0 blur-xl transition-opacity group-hover:opacity-100" />
                 <div className="flex items-start justify-between">
                   <div className="glass flex h-10 w-10 items-center justify-center rounded-xl">
-                    <h.icon className="h-5 w-5 text-aurora" />
+                    <h.icon className="h-5 w-5 text-violet-300" />
                   </div>
-                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-aurora" />
+                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-violet-300" />
                 </div>
                 <div className="mt-6 flex items-baseline justify-between gap-4">
                   <h3 className="font-display text-xl font-semibold">{h.title}</h3>
@@ -200,7 +205,7 @@ function Home() {
             />
             <div className="relative grid gap-8 sm:grid-cols-[1.4fr_1fr] sm:items-center">
               <div>
-                <div className="font-mono text-xs uppercase tracking-[0.3em] text-aurora">
+                <div className="font-mono text-xs uppercase tracking-[0.3em] text-violet-300">
                   ▸ open transmission
                 </div>
                 <h2 className="mt-3 font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">

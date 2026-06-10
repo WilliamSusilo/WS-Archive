@@ -56,7 +56,7 @@ function ProjectsPage() {
                 {/* Header */}
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
-                    <span className="font-mono text-xs text-aurora">▸ {p.coord}</span>
+                    <span className="font-mono text-xs text-violet-300">▸ {p.coord}</span>
                     <span className="text-xs text-muted-foreground">{p.year}</span>
                   </div>
 
@@ -64,7 +64,7 @@ function ProjectsPage() {
                     href={p.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground transition-all hover:text-aurora"
+                    className="text-muted-foreground transition-all hover:text-violet-300"
                     aria-label={`Open ${p.title} repository`}
                   >
                     <ArrowUpRight className="h-5 w-5 transition-all hover:-translate-y-0.5 hover:translate-x-0.5" />
@@ -73,7 +73,7 @@ function ProjectsPage() {
 
                 {/* Featured Badge */}
                 {p.featured && (
-                  <div className="mt-4 inline-flex items-center gap-1 rounded-full bg-aurora/10 px-3 py-1 text-[10px] uppercase tracking-wider text-aurora">
+                  <div className="mt-4 inline-flex items-center gap-1 rounded-full bg-aurora/10 px-3 py-1 text-[10px] uppercase tracking-wider text-violet-300">
                     <Star className="h-3 w-3" />
                     Featured Project
                   </div>
@@ -114,7 +114,7 @@ function ProjectsPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-3 py-2 text-xs transition-all hover:border-aurora hover:text-aurora"
+                        className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-3 py-2 text-xs transition-all hover:border-aurora hover:text-violet-300"
                       >
                         <Github className="h-4 w-4" />
                         GitHub
@@ -127,7 +127,7 @@ function ProjectsPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-3 py-2 text-xs transition-all hover:border-aurora hover:text-aurora"
+                        className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-3 py-2 text-xs transition-all hover:border-aurora hover:text-violet-300"
                       >
                         <ExternalLink className="h-4 w-4" />
                         Demo

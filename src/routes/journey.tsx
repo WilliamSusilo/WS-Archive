@@ -36,7 +36,7 @@ function JourneyPage() {
               <div key={t.name} className="glass rounded-2xl p-6">
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-aurora/15 text-aurora">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-aurora/15 text-violet-300">
                       <Icon className="h-5 w-5" />
                     </div>
                     <div>
@@ -44,7 +44,7 @@ function JourneyPage() {
                       <div className="text-xs text-muted-foreground">{t.note}</div>
                     </div>
                   </div>
-                  <span className="font-mono text-sm text-aurora">{t.value}%</span>
+                  <span className="font-mono text-sm text-violet-300">{t.value}%</span>
                 </div>
                 <div className="mt-5 h-1.5 overflow-hidden rounded-full bg-white/5">
                   <div

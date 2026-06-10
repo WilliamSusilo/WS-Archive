@@ -83,7 +83,7 @@ function StoryPage() {
                   >
                     <Calendar className="h-3 w-3" />
                     <span>{p.date}</span>
-                    <span className="rounded-full bg-accent/15 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-aurora">
+                    <span className="rounded-full bg-accent/15 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-violet-300">
                       {p.tag}
                     </span>
                   </div>

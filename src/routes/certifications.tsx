@@ -48,13 +48,13 @@ function CertificationsPage() {
 
                 <div className="relative">
                   <div className="flex items-center justify-between">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-aurora/20 text-aurora">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-aurora/20 text-violet-300">
                       <Icon className="h-5 w-5" />
                     </div>
 
                     <div className="flex items-center gap-2">
                       {c.featured && (
-                        <span className="rounded-full bg-aurora/20 px-2 py-1 text-[10px] font-medium text-aurora">
+                        <span className="rounded-full bg-aurora/20 px-2 py-1 text-[10px] font-medium text-violet-300">
                           Featured
                         </span>
                       )}

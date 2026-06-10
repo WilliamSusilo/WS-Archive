@@ -83,9 +83,9 @@ function ContactPage() {
           <div className="glass-strong relative overflow-hidden rounded-3xl p-8 sm:p-12 text-center shadow-cosmic">
             <div className="absolute -top-32 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-aurora opacity-30 blur-3xl" />
             <div className="relative">
-              <MapPin className="mx-auto h-6 w-6 text-aurora" />
+              <MapPin className="mx-auto h-6 w-6 text-violet-300" />
               <h3 className="mt-4 font-display text-2xl font-semibold sm:text-3xl">
-                Open to the <span className="text-aurora">NEXT CHALLENGE</span>.
+                Open to the <span className="text-violet-300">NEXT CHALLENGE</span>.
               </h3>
               <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground">
                 Cloud engineering, AI systems, and scalable software are where I do my best work. If
@@ -134,8 +134,8 @@ function ContactPage() {
                 >
                   <div className="absolute -inset-1 -z-10 rounded-2xl bg-gradient-to-br from-accent/20 via-cosmic/10 to-transparent opacity-0 blur-xl transition-opacity group-hover:opacity-100" />
                   <div className="flex items-center justify-between">
-                    <Icon className="h-5 w-5 text-aurora" />
-                    <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-aurora" />
+                    <Icon className="h-5 w-5 text-violet-300" />
+                    <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-violet-300" />
                   </div>
                   <div className="mt-4 font-display text-sm font-semibold">{c.name}</div>
                   <div className="mt-0.5 text-[11px] font-mono text-muted-foreground">

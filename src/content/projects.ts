@@ -3,6 +3,19 @@ import type { Project } from "@/types/project";
 export const PROJECTS: Project[] = [
   {
     coord: "01",
+    year: "2026",
+    title: "Parkicare",
+    tag: "Mobile Application · Healthcare Technology",
+    role: "Mobile Developer",
+    desc: "An Android-based mobile application designed to support Parkinson’s disease patients through personalized fall risk assessment, medication management, and movement monitoring. The application utilizes mobile device sensors, Firebase cloud services, and risk stratification techniques to help users identify potential fall risks and improve daily safety.",
+    stack: ["Kotlin", "Jetpack Compose", "Firebase", "Android Sensors"],
+    image: "/projects/parkicare.webp",
+    github: "https://github.com/WilliamSusilo/ParkinsonAssitant_v.1.0",
+    featured: true,
+  },
+
+  {
+    coord: "02",
     year: "2024",
     title: "SpeechEase",
     tag: "Cloud Computing · Mobile Application",
@@ -16,7 +29,7 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    coord: "02",
+    coord: "03",
     year: "2024",
     title: "planT",
     tag: "Mobile Application · Agriculture",
@@ -30,7 +43,7 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    coord: "03",
+    coord: "04",
     year: "2024",
     title: "Piru Application",
     tag: "Web Application · Booking System",
@@ -43,7 +56,7 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    coord: "04",
+    coord: "05",
     year: "2024",
     title: "NotedGo",
     tag: "Web Application · Productivity",
@@ -52,11 +65,11 @@ export const PROJECTS: Project[] = [
     stack: ["PHP", "MySQL", "Tailwind CSS", "JavaScript"],
     image: "/projects/notedgo.webp",
     github: "https://github.com/WilliamSusilo/NotedGo",
-    featured: true,
+    featured: false,
   },
 
   {
-    coord: "05",
+    coord: "06",
     year: "2023",
     title: "To Do List App",
     tag: "Mobile Application · Productivity",
@@ -69,7 +82,7 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    coord: "06",
+    coord: "07",
     year: "2023",
     title: "Student Recording System",
     tag: "Information System · Education",
@@ -82,7 +95,7 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    coord: "07",
+    coord: "08",
     year: "2023",
     title: "Library's Helper App",
     tag: "Desktop Application · Library Management",
@@ -95,7 +108,7 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    coord: "08",
+    coord: "09",
     year: "2022",
     title: "Personal Website",
     tag: "Portfolio · Web Development",
