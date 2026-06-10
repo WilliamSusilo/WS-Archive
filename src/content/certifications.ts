@@ -1,4 +1,4 @@
-import { Award, Cloud, Shield, Server, Database } from "lucide-react";
+import { Award, Cloud, Shield, Server, Database, Users } from "lucide-react";
 import type { Certification } from "@/types/certification";
 
 export const CERTIFICATIONS: Certification[] = [
@@ -29,7 +29,7 @@ export const CERTIFICATIONS: Certification[] = [
     name: "Become a Google Cloud Architect",
     issuer: "Dicoding",
     year: "2025",
-    icon: Server,
+    icon: Cloud,
     description:
       "Focused on cloud architecture, infrastructure design, scalability, and modern cloud deployment strategies.",
     credentialUrl: "https://www.dicoding.com/certificates/GRX5W09N3Z0M",
@@ -59,7 +59,7 @@ export const CERTIFICATIONS: Certification[] = [
     name: "Become a Google Cloud Engineer",
     issuer: "Dicoding",
     year: "2024",
-    icon: Database,
+    icon: Cloud,
     description:
       "Demonstrated practical knowledge of Google Cloud services, infrastructure deployment, networking, security, and operations.",
     credentialUrl: "https://www.dicoding.com/certificates/6RPNY073QZ2M",
@@ -69,7 +69,7 @@ export const CERTIFICATIONS: Certification[] = [
     name: "Learn to Build Back-End Applications for Beginners with Google Cloud",
     issuer: "Dicoding",
     year: "2024",
-    icon: Database,
+    icon: Server,
     description:
       "Learned the fundamentals of back-end development, including RESTful APIs, server-side architecture, data handling, and Google Cloud integration.",
     credentialUrl: "https://www.dicoding.com/certificates/4EXG7JY1QPRL",
@@ -79,7 +79,7 @@ export const CERTIFICATIONS: Certification[] = [
     name: "Employability Skills",
     issuer: "Wadhwani Foundation",
     year: "2024",
-    icon: Database,
+    icon: Users,
     description:
       "Enhanced professional readiness through communication, collaboration, critical thinking, customer-centricity, and workplace productivity skills.",
     credentialUrl:
